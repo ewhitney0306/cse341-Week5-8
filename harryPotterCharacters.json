@@ -1,0 +1,38 @@
+{
+    "character1" : {
+        "firstName" : "Harry",
+        "lastName" : "Potter",
+        "species" : "human",
+        "magicalStatus" : "wizard",
+        "hogwartsHouse" : "Gryffindor",
+        "bookOfFirstAppearance": "1",
+        "bookOfLastAppearance": "7"
+    },
+    "character2" : {
+        "firstName" : "Hermione",
+        "lastName" : "Granger",
+        "species" : "human",
+        "magicalStatus" : "wizard",
+        "hogwartsHouse" : "Gryffindor",
+        "bookOfFirstAppearance": "1",
+        "bookOfLastAppearance": "7"
+    },
+    "character3" : {
+        "firstName" : "Rubeus",
+        "lastName" : "Hagrid",
+        "species" : "half-giant",
+        "magicalStatus" : "wizard",
+        "hogwartsHouse" : "Gryffindor",
+        "bookOfFirstAppearance": "1",
+        "bookOfLastAppearance": "7"
+    },
+    "character4" : {
+        "firstName" : "Dudley",
+        "lastName" : "Dursley",
+        "species" : "human",
+        "magicalStatus" : "muggle",
+        "hogwartsHouse" : "N/A",
+        "bookOfFirstAppearance": "1",
+        "bookOfLastAppearance": "7"
+    }
+}

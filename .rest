@@ -1,0 +1,36 @@
+### 
+GET http://localhost:8080/character
+
+###
+GET http://localhost:8080/character/67103595f854d72d4a85562e
+
+###
+POST http://localhost:8080/character
+Content-type:application/json
+
+{
+        "firstName" : "Vernon",
+        "lastName" : "Dursley",
+        "species" : "human",
+        "magicalStatus" : "muggle",
+        "hogwartsHouse" : "N/A",
+        "bookOfFirstAppearance": "1",
+        "bookOfLastAppearance": "7"
+    }
+
+###
+PUT http://localhost:8080/character/67103595f854d72d4a85562e
+Content-type:application/json
+
+{
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "species": "human",
+    "magicalStatus": "wizard",
+    "hogwartsHouse": "Gryffindor",
+    "bookOfFirstAppearance": 1,
+    "bookOfLastAppearance": 7
+}
+
+###
+DELETE http://localhost:8080/character/67103c2a6b00a15aae602c21
