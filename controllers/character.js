@@ -2,15 +2,22 @@ const { response } = require('express');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res, next) => {
-    const result = await mongodb.getDb().db('HarryPotter').collection('characters').find();
-    result.toArray().then((lists) => {
+const getAll = (req, res) => {
+    mongodb
+      .getDb()
+      .db('HarryPotter')
+      .collection('characters')
+      .find()
+      .toArray((err, lists) => {
+        if(err){
+          res.status(400).json({message: err});
+        }
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists);
-    });
-};
+      });
+  };
 
-const createCharacter = async (req, res, next) => {
+const createCharacter = async (req, res) => {
     const character = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -35,20 +42,29 @@ const createCharacter = async (req, res, next) => {
     }
 };
 
-const getSingle = async (req, res, next) => {
+const getSingle = async (req, res) => {
+    if(!ObjectId.isValid(req.params.id)){
+        res.status(400).json('Must use a valid contact ID to find a character.');
+    }
     const userId = new ObjectId(req.params.id);
-    const result = await mongodb
-        .getDb()
-        .db('HarryPotter')
-        .collection('characters')
-        .find({_id: userId});
-    result.toArray().then ((lists) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(lists[0]);
+    mongodb
+    .getDb()
+    .db('HarryPotter')
+    .collection('characters')
+    .find({_id: userId})
+    .toArray((err, result) => {
+      if(err){
+        res.status(400).json({message: err});
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result[0]);
     });
 };
 
-const editCharacter = async (req, res, next) => {
+const editCharacter = async (req, res) => {
+    if(!ObjectId.isValid(req.params.id)){
+        res.status(400).json('Must use a valid contact ID to update a character.');
+      }
     const userId = new ObjectId(req.params.id);
     const character = {
         firstName: req.body.firstName,
@@ -69,7 +85,10 @@ const editCharacter = async (req, res, next) => {
     }
 };
 
-const deleteCharacter = async (req, res, next) => {
+const deleteCharacter = async (req, res) => {
+    if(!ObjectId.isValid(req.params.id)){
+        res.status(400).json('Must use a valid contact ID to delete a contact.');
+    }
     const userId = new ObjectId(req.params.id);
 
     const result = await mongodb.getDb().db('HarryPotter').collection('characters').deleteOne({_id: userId});

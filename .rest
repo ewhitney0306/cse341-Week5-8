@@ -14,8 +14,8 @@ Content-type:application/json
         "species" : "human",
         "magicalStatus" : "muggle",
         "hogwartsHouse" : "N/A",
-        "bookOfFirstAppearance": "1",
-        "bookOfLastAppearance": "7"
+        "bookOfFirstAppearance": 1,
+        "bookOfLastAppearance": 7
     }
 
 ###
@@ -52,8 +52,8 @@ Content-type:application/json
         "species" : "human",
         "magicalStatus" : "muggle",
         "hogwartsHouse" : "N/A",
-        "bookOfFirstAppearance": "1",
-        "bookOfLastAppearance": "7"
+        "bookOfFirstAppearance": 1,
+        "bookOfLastAppearance": 7
     }
 
 ###
