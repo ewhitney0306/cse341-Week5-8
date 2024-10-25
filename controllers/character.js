@@ -15,7 +15,7 @@ const getAll = (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists);
       });
-  };
+};
 
 const createCharacter = async (req, res) => {
     const character = {

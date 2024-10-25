@@ -26,4 +26,4 @@ const saveCharacter = (req, res, next) => {
 
 module.exports = {
     saveCharacter
-}
+};

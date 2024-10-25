@@ -5,26 +5,29 @@
     "description": "Harry Potter API",
     "version": "1.0.0"
   },
-  "host": "cse341-week5-8.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/character/": {
       "get": {
-        "description": "This function returns all the Characters in the Database ",
+        "description": "",
         "produces": [
           "application/json"
         ],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
       "post": {
-        "description": "This function adds a new character to the database",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -48,10 +51,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
@@ -60,6 +63,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -69,7 +75,7 @@
     },
     "/character/{id}": {
       "get": {
-        "description": "This function returns a single character with the matching ID",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -84,11 +90,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
       "put": {
-        "description": "This function updates the character with the matching ID",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -118,10 +127,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
@@ -131,13 +140,19 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-        "description": "The function deletes the character with the matching ID",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -149,6 +164,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"

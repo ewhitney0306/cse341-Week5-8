@@ -4,7 +4,7 @@ const router = express.Router();
 const characterController = require ('../controllers/character.js');
 const validation = require('../middleware/validate.js');
 
-router.get('/', characterController.getAll);
+router.get('', characterController.getAll);
 
 router.post('/', validation.saveCharacter, characterController.createCharacter);
 
