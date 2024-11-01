@@ -13,7 +13,7 @@ const getAllLocations = async (req, res, next) => {
 const createLocation = async (req, res) => {
     const location = {
         locationName: req.body.locationName,
-        CountryOfOrigin: req.body.CountryOfOrigin,
+        countryOfOrigin: req.body.CountryOfOrigin,
         bookOfFirstAppearance: req.body.bookOfFirstAppearance,
         bookOfLastAppearance: req.body.bookOfLastAppearance
     };
@@ -34,7 +34,7 @@ const createLocation = async (req, res) => {
 
 const getSingleLocation = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to find a location.');
+        res.status(400).json('Must use a valid location ID to find a location.');
     }
     const userId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -50,7 +50,7 @@ const getSingleLocation = async (req, res) => {
 
 const editLocation = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to update a location.');
+        res.status(400).json('Must use a valid location ID to update a location.');
       }
     const userId = new ObjectId(req.params.id);
     const location = {
@@ -71,7 +71,7 @@ const editLocation = async (req, res) => {
 
 const deleteLocation = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to delete a location.');
+        res.status(400).json('Must use a valid location ID to delete a location.');
     }
     const userId = new ObjectId(req.params.id);
 
