@@ -1,0 +1,20 @@
+{
+    "location1" : {
+        "locationName" : "Platform 9 3/4",
+        "CountryOfOrigin" : "United Kingdom",
+        "bookOfFirstAppearance" : 1,
+        "bookOfLastAppearance" : 7
+    },
+    "location2" : {
+        "locationName" : "Hogsmeade",
+        "CountryOfOrigin" : "Scotland",
+        "bookOfFirstAppearance" : 3,
+        "bookOfLastAppearance" : 7
+    },
+    "location3" : {
+        "locationName" : "4 Privet Dr.",
+        "CountryOfOrigin" : "United Kingdom",
+        "bookOfFirstAppearance" : 1,
+        "bookOfLastAppearance" : 7
+    }
+}

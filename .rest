@@ -1,3 +1,4 @@
+#Local Character Routes
 ### 
 GET http://localhost:8080/character
 
@@ -35,7 +36,41 @@ Content-type:application/json
 ###
 DELETE http://localhost:8080/character/67103c2a6b00a15aae602c21
 
-#Production Routes
+###
+
+#Local Location Routes
+###
+GET http://localhost:8080/location
+
+###
+GET http://localhost:8080/location/672457a04d503eaaffe41cc7
+
+###
+POST http://localhost:8080/location
+Content-Type: application/json
+
+{
+    "locationName" : "Hagrids Hut",
+    "CountryOfOrigin" : "Scotland",
+    "bookOfFirstAppearance" : 1,
+    "bookOfLastAppearance" : 6
+}
+
+###
+PUT http://localhost:8080/location/67245ec76c01c8c159fe42db
+Content-Type: application/json
+
+{
+    "locationName" : "Hagrid's Hut",
+    "bookOfFirstAppearance" : 1,
+    "bookOfLastAppearance" : 7
+}
+###
+DELETE http://localhost:8080/location/67245ec76c01c8c159fe42db
+
+###
+
+#Production Character Routes
 ### 
 GET https://cse341-week5-8.onrender.com/character
 
@@ -72,3 +107,37 @@ Content-type:application/json
 
 ###
 DELETE https://cse341-week5-8.onrender.com/character/67103c2a6b00a15aae602c21
+
+###
+
+#Production Location Routes
+###
+GET https://cse341-week5-8.onrender.com/location
+
+###
+GET https://cse341-week5-8.onrender.com/672457a04d503eaaffe41cc7
+
+###
+POST https://cse341-week5-8.onrender.com/location
+Content-Type: application/json
+
+{
+    "locationName" : "Hagrids Hut",
+    "CountryOfOrigin" : "Scotland",
+    "bookOfFirstAppearance" : 1,
+    "bookOfLastAppearance" : 6
+}
+
+###
+PUT https://cse341-week5-8.onrender.com/location/67245ec76c01c8c159fe42db
+Content-Type: application/json
+
+{
+    "locationName" : "Hagrid's Hut",
+    "bookOfFirstAppearance" : 1,
+    "bookOfLastAppearance" : 7
+}
+###
+DELETE https://cse341-week5-8.onrender.com/location/67245ec76c01c8c159fe42db
+
+###

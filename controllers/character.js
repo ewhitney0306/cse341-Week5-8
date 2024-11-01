@@ -2,7 +2,7 @@ const { response } = require('express');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res, next) => {
+const getAllCharacters = async (req, res, next) => {
     const result = await mongodb.getDb().db('HarryPotter').collection('characters').find();
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
@@ -35,7 +35,7 @@ const createCharacter = async (req, res) => {
     }
 };
 
-const getSingle = async (req, res) => {
+const getSingleCharacter = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
         res.status(400).json('Must use a valid contact ID to find a character.');
     }
@@ -71,7 +71,7 @@ const editCharacter = async (req, res) => {
     if(result.modifiedCount > 0){
         res.status(204).send();
     } else {
-        res.status(500).json(response.error || "Some Error occurred while updating the contact"); 
+        res.status(500).json(response.error || "Some Error occurred while updating the character"); 
     }
 };
 
@@ -92,4 +92,4 @@ const deleteCharacter = async (req, res) => {
     }
 };
 
-module.exports = {getAll, createCharacter, getSingle, editCharacter, deleteCharacter};
+module.exports = {getAllCharacters, createCharacter, getSingleCharacter, editCharacter, deleteCharacter};
