@@ -37,7 +37,7 @@ const createCharacter = async (req, res) => {
 
 const getSingleCharacter = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to find a character.');
+        res.status(400).json('Must use a valid character ID to find a character.');
     }
     const userId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -53,7 +53,7 @@ const getSingleCharacter = async (req, res) => {
 
 const editCharacter = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to update a character.');
+        res.status(400).json('Must use a valid character ID to update a character.');
       }
     const userId = new ObjectId(req.params.id);
     const character = {
@@ -77,7 +77,7 @@ const editCharacter = async (req, res) => {
 
 const deleteCharacter = async (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        res.status(400).json('Must use a valid contact ID to delete a contact.');
+        res.status(400).json('Must use a valid character ID to delete a contact.');
     }
     const userId = new ObjectId(req.params.id);
 

@@ -13,7 +13,7 @@
   "paths": {
     "/character/": {
       "get": {
-        "description": "",
+        "description": "Returns all Characters",
         "produces": [
           "application/json"
         ],
@@ -24,7 +24,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "creates a new character",
         "parameters": [
           {
             "name": "body",
@@ -48,10 +48,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
@@ -124,10 +124,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
@@ -199,10 +199,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
@@ -266,10 +266,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": "any"
+                  "example": 1
                 },
                 "bookOfLastAppearance": {
-                  "example": "any"
+                  "example": 7
                 }
               }
             }
