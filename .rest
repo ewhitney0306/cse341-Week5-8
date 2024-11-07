@@ -1,3 +1,13 @@
+# ###
+# GET http://localhost:8080/google
+# ###
+# GET http://localhost:8080/failed
+# ###
+# GET http://localhost:8080/success
+# ###
+# GET http://localhost:8080/logout
+###
+
 #Local Character Routes
 ### 
 GET http://localhost:8080/character

@@ -13,7 +13,7 @@
   "paths": {
     "/character/": {
       "get": {
-        "description": "Returns all Characters",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -24,7 +24,7 @@
         }
       },
       "post": {
-        "description": "creates a new character",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -48,10 +48,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": 1
+                  "example": "any"
                 },
                 "bookOfLastAppearance": {
-                  "example": 7
+                  "example": "any"
                 }
               }
             }
@@ -124,10 +124,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": 1
+                  "example": "any"
                 },
                 "bookOfLastAppearance": {
-                  "example": 7
+                  "example": "any"
                 }
               }
             }
@@ -199,10 +199,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": 1
+                  "example": "any"
                 },
                 "bookOfLastAppearance": {
-                  "example": 7
+                  "example": "any"
                 }
               }
             }
@@ -266,10 +266,10 @@
                   "example": "any"
                 },
                 "bookOfFirstAppearance": {
-                  "example": 1
+                  "example": "any"
                 },
                 "bookOfLastAppearance": {
-                  "example": 7
+                  "example": "any"
                 }
               }
             }
@@ -309,6 +309,69 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/failed": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/success": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/google": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/google/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
